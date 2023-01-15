@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Urls {
+  raw: String
+  full: String
+}
+
+type ProfilePicture {
+  small: String
+  medium: String
+  large: String
+}
+
+type User {
+  id: String
+  username: String
+  name: String
+  profile_image: ProfilePicture
+}
+
+type Pin {
+  id: String
+  description: String
+  urls: Urls
+  user: User
+}
+
+type Query {
+  hello: [Pin!]!
+  search(query: String!): [Pin!]!
+}
